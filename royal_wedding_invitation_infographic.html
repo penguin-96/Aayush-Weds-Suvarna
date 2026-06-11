@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ajmera Family Wedding - Invitation & Itinerary</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalRed: '#800020', // Deep burgundy/crimson
+                        goldAccent: '#D4AF37', // Premium metallic gold
+                        saffron: '#F4C430', // Warm haldi yellow
+                        emerald: '#097969', // Royal green
+                        creamBg: '#FCFBF7', // Elegant off-white
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        cursive: ['Great Vibes', 'cursive'],
+                        cinzel: ['Cinzel Decorative', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Decorative Animations */
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes swing {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 40s linear infinite;
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-swing {
+            animation: swing 3s ease-in-out infinite;
+            transform-origin: top center;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FCFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-creamBg text-royalRed font-sans min-h-screen overflow-x-hidden selection:bg-goldAccent selection:text-royalRed">
+
+    <!-- Ambient Music Controls (Web Audio API Synth) -->
+    <div class="fixed top-4 right-4 z-50 flex items-center gap-2 bg-royalRed/90 backdrop-blur-md text-goldAccent py-2 px-4 rounded-full border border-goldAccent shadow-lg cursor-pointer transition hover:scale-105 active:scale-95" id="musicToggle">
+        <i data-lucide="music" class="w-4 h-4 animate-bounce"></i>
+        <span class="text-xs font-semibold tracking-wider font-sans uppercase" id="musicLabel">Play Shehnai</span>
+    </div>
+
+    <!-- MAIN PORTAL WRAPPER -->
+    <div id="mainContainer" class="relative max-w-lg mx-auto bg-creamBg min-h-screen shadow-2xl border-x border-goldAccent/30 pb-24 overflow-hidden">
+
+        <!-- Elegant Marigold Hangings (Top Garland) -->
+        <div class="absolute top-0 left-0 right-0 h-16 pointer-events-none z-30 flex justify-around overflow-hidden">
+            <!-- Repeating Marigold SVG Chains -->
+            <svg class="w-20 h-16 text-saffron/90 animate-swing" viewBox="0 0 100 120" fill="currentColor">
+                <circle cx="50" cy="15" r="12" fill="#E97451"/> <circle cx="50" cy="15" r="8" fill="#F4C430"/>
+                <circle cx="50" cy="40" r="10" fill="#E97451"/> <circle cx="50" cy="40" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="65" r="8" fill="#E97451"/> <circle cx="50" cy="65" r="5" fill="#F4C430"/>
+                <line x1="50" y1="0" x2="50" y2="75" stroke="#097969" stroke-width="2"/>
+            </svg>
+            <svg class="w-20 h-20 text-saffron/90 animate-swing" style="animation-delay: 0.5s" viewBox="0 0 100 120" fill="currentColor">
+                <circle cx="50" cy="15" r="12" fill="#E97451"/> <circle cx="50" cy="15" r="8" fill="#F4C430"/>
+                <circle cx="50" cy="40" r="10" fill="#E97451"/> <circle cx="50" cy="40" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="65" r="10" fill="#E97451"/> <circle cx="50" cy="65" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="90" r="8" fill="#097969"/>
+                <line x1="50" y1="0" x2="50" y2="95" stroke="#097969" stroke-width="2"/>
+            </svg>
+            <svg class="w-20 h-16 text-saffron/90 animate-swing" style="animation-delay: 1s" viewBox="0 0 100 120" fill="currentColor">
+                <circle cx="50" cy="15" r="12" fill="#E97451"/> <circle cx="50" cy="15" r="8" fill="#F4C430"/>
+                <circle cx="50" cy="40" r="10" fill="#E97451"/> <circle cx="50" cy="40" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="65" r="8" fill="#E97451"/> <circle cx="50" cy="65" r="5" fill="#F4C430"/>
+                <line x1="50" y1="0" x2="50" y2="75" stroke="#097969" stroke-width="2"/>
+            </svg>
+            <svg class="w-20 h-20 text-saffron/90 animate-swing" style="animation-delay: 0.2s" viewBox="0 0 100 120" fill="currentColor">
+                <circle cx="50" cy="15" r="12" fill="#E97451"/> <circle cx="50" cy="15" r="8" fill="#F4C430"/>
+                <circle cx="50" cy="40" r="10" fill="#E97451"/> <circle cx="50" cy="40" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="65" r="10" fill="#E97451"/> <circle cx="50" cy="65" r="6" fill="#F4C430"/>
+                <circle cx="50" cy="90" r="8" fill="#097969"/>
+                <line x1="50" y1="0" x2="50" y2="95" stroke="#097969" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <!-- SCREEN 1: THE MAJESTIC COVER -->
+        <section id="screenCover" class="min-h-screen flex flex-col justify-between items-center px-6 py-12 relative z-10 transition-opacity duration-700">
+            <!-- Top Mandala -->
+            <div class="w-full flex justify-center pt-8">
+                <div class="relative w-40 h-40 flex items-center justify-center">
+                    <!-- Spinning Gold Mandala -->
+                    <svg class="w-full h-full text-goldAccent/30 animate-spin-slow absolute" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="50" cy="50" r="45" stroke-dasharray="5 5" />
+                        <path d="M50 5 L50 95 M5 50 L95 50 M18 18 L82 82 M18 82 L82 18" />
+                        <circle cx="50" cy="50" r="30" />
+                        <!-- Complex petals -->
+                        <path d="M50 20 C40 35 60 35 50 20 Z M50 80 C40 65 60 65 50 80 Z M20 50 C35 40 35 60 20 50 Z M80 50 C65 40 65 60 80 50 Z" fill="currentColor" fill-opacity="0.1"/>
+                    </svg>
+                    <!-- Couple Initials Monogram -->
+                    <div class="z-10 text-center">
+                        <span class="font-cinzel text-3xl font-bold text-goldAccent tracking-widest block">A</span>
+                        <div class="h-[1px] w-12 bg-goldAccent mx-auto my-1"></div>
+                        <span class="font-sans text-xxs tracking-widest text-royalRed uppercase font-semibold">The Wedding</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Couple Name & Call to Action -->
+            <div class="text-center my-6 animate-float">
+                <p class="font-sans text-xs tracking-[0.25em] text-royalRed uppercase mb-3 font-semibold">Together with the Ajmera Family</p>
+                <h2 class="font-cursive text-5xl text-goldAccent drop-shadow-sm mb-2">Save the Dates</h2>
+                <div class="flex items-center justify-center gap-2 my-4">
+                    <span class="w-8 h-[1px] bg-goldAccent"></span>
+                    <span class="font-sans text-sm tracking-widest text-emerald font-bold">JULY 2 - 5, 2026</span>
+                    <span class="w-8 h-[1px] bg-goldAccent"></span>
+                </div>
+                <p class="font-serif text-lg text-royalRed/90 italic mt-2">Jodhpur & Delhi</p>
+            </div>
+
+            <!-- Live Countdown Clock -->
+            <div class="w-full bg-royalRed text-goldAccent p-4 rounded-xl border border-goldAccent/40 shadow-xl mb-8">
+                <p class="text-center font-sans text-xs uppercase tracking-widest text-white mb-2">Auspicious Countdown</p>
+                <div class="grid grid-cols-4 gap-2 text-center">
+                    <div class="bg-black/20 p-2 rounded">
+                        <span id="days" class="font-serif text-2xl font-bold">00</span>
+                        <p class="text-[9px] uppercase tracking-wider text-white/85">Days</p>
+                    </div>
+                    <div class="bg-black/20 p-2 rounded">
+                        <span id="hours" class="font-serif text-2xl font-bold">00</span>
+                        <p class="text-[9px] uppercase tracking-wider text-white/85">Hours</p>
+                    </div>
+                    <div class="bg-black/20 p-2 rounded">
+                        <span id="minutes" class="font-serif text-2xl font-bold">00</span>
+                        <p class="text-[9px] uppercase tracking-wider text-white/85">Mins</p>
+                    </div>
+                    <div class="bg-black/20 p-2 rounded">
+                        <span id="seconds" class="font-serif text-2xl font-bold">00</span>
+                        <p class="text-[9px] uppercase tracking-wider text-white/85">Secs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enter Portal Button -->
+            <button onclick="switchScreen('screenEvents')" class="w-full bg-gradient-to-r from-royalRed to-red-900 text-goldAccent font-sans py-4 px-8 rounded-full border border-goldAccent font-bold tracking-widest uppercase transition-all duration-300 hover:shadow-2xl hover:scale-105 active:scale-95 flex items-center justify-center gap-3">
+                <span>View Elegant Invitation</span>
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </section>
+
+        <!-- SCREEN 2: ITINERARY INFOGRAPHIC -->
+        <section id="screenEvents" class="hidden min-h-screen px-6 py-12 relative z-10 transition-opacity duration-700">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <span class="font-cursive text-3xl text-goldAccent block">Subh Vivah</span>
+                <h1 class="font-cinzel text-2xl font-bold tracking-widest text-royalRed mt-1">Wedding Itinerary</h1>
+                <p class="font-sans text-xs tracking-wider text-emerald uppercase font-semibold mt-1">Celebration Timeline & Details</p>
+                <div class="w-16 h-[2px] bg-goldAccent mx-auto mt-3"></div>
+            </div>
+
+            <!-- Scrollable Timeline -->
+            <div class="space-y-8 relative before:absolute before:inset-0 before:left-6 before:w-[2px] before:bg-goldAccent/30">
+
+                <!-- EVENT 1: Pitthi Haldi & Myra -->
+                <div class="relative pl-12 group transition-all duration-300">
+                    <!-- Dot marker -->
+                    <div class="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-saffron border-2 border-goldAccent flex items-center justify-center z-10">
+                        <span class="w-2 h-2 rounded-full bg-royalRed"></span>
+                    </div>
+                    <!-- Card Content -->
+                    <div class="bg-white p-5 rounded-xl border border-goldAccent/25 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-saffron/25 text-royalRed text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Thursday, July 2, 2026</span>
+                            <span class="text-emerald font-sans font-semibold text-xs flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 10:00 AM
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-royalRed flex items-center gap-2">
+                            <span>Pitthi Haldi & Myra</span>
+                        </h3>
+                        <p class="text-xs text-stone-600 mt-2">Join us as we smear the lovely couple with golden turmeric paste, followed by a royal Myra ceremony filled with dynamic rituals and joy.</p>
+                        <!-- Location & Map -->
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 text-xs text-stone-700">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-royalRed"></i>
+                                <span>Lariya Resort, Jodhpur</span>
+                            </div>
+                            <a href="https://maps.google.com/?q=Lariya+Resort+Jodhpur" target="_blank" class="text-xs font-semibold text-goldAccent hover:underline flex items-center gap-1">
+                                <span>View Map</span> <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVENT 2: Tika & Sangeet -->
+                <div class="relative pl-12 group transition-all duration-300">
+                    <div class="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-royalRed border-2 border-goldAccent flex items-center justify-center z-10">
+                        <span class="w-2 h-2 rounded-full bg-goldAccent"></span>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-goldAccent/25 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-royalRed/10 text-royalRed text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Thursday, July 2, 2026</span>
+                            <span class="text-emerald font-sans font-semibold text-xs flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 7:00 PM onwards
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-royalRed flex items-center gap-2">
+                            <span>Tika & Sangeet Night</span>
+                        </h3>
+                        <p class="text-xs text-stone-600 mt-2">An evening of mesmerizing melodies, colorful dance performances by family members, and traditional Shubh Tika blessings.</p>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 text-xs text-stone-700">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-royalRed"></i>
+                                <span>Lariya Resort, Jodhpur</span>
+                            </div>
+                            <a href="https://maps.google.com/?q=Lariya+Resort+Jodhpur" target="_blank" class="text-xs font-semibold text-goldAccent hover:underline flex items-center gap-1">
+                                <span>View Map</span> <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVENT 3: Carnival (Phoolon vali Haldi) -->
+                <div class="relative pl-12 group transition-all duration-300">
+                    <div class="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-saffron border-2 border-goldAccent flex items-center justify-center z-10">
+                        <span class="w-2 h-2 rounded-full bg-emerald"></span>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-goldAccent/25 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-saffron/25 text-royalRed text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Friday, July 3, 2026</span>
+                            <span class="text-emerald font-sans font-semibold text-xs flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 10:00 AM
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-royalRed flex items-center gap-2">
+                            <span>Phoolon Vali Haldi Carnival</span>
+                        </h3>
+                        <p class="text-xs text-stone-600 mt-2">Experience a colorful floral celebration with thousands of fresh flower petals rained upon the bride & groom amidst rhythmic dhol beats!</p>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 text-xs text-stone-700">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-royalRed"></i>
+                                <span>Lariya Resort, Jodhpur</span>
+                            </div>
+                            <a href="https://maps.google.com/?q=Lariya+Resort+Jodhpur" target="_blank" class="text-xs font-semibold text-goldAccent hover:underline flex items-center gap-1">
+                                <span>View Map</span> <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVENT 4: Ghud Chadi & Baarat -->
+                <div class="relative pl-12 group transition-all duration-300">
+                    <div class="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-emerald border-2 border-goldAccent flex items-center justify-center z-10">
+                        <span class="w-2 h-2 rounded-full bg-saffron"></span>
+                    </div>
+                    <div class="bg-amber-50/50 p-5 rounded-xl border-2 border-goldAccent shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="absolute top-[-10px] right-4 bg-goldAccent text-royalRed text-[9px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow border border-white">Main Event</div>
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-emerald/10 text-emerald text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Friday, July 3, 2026</span>
+                            <span class="text-emerald font-sans font-semibold text-xs flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> 7:00 PM onwards
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-royalRed flex items-center gap-2">
+                            <span>Ghud Chadi, Baarat & Wedding</span>
+                        </h3>
+                        <p class="text-xs text-stone-600 mt-2">Dressed in royal groom style, Ghanshyam and Akshay Ajmera lead the majestic procession towards the sacred mandap for the solemnization of vows.</p>
+                        <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 text-xs text-stone-700">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-royalRed"></i>
+                                <span>Lariya Resort, Jodhpur</span>
+                            </div>
+                            <a href="https://maps.google.com/?q=Lariya+Resort+Jodhpur" target="_blank" class="text-xs font-semibold text-goldAccent hover:underline flex items-center gap-1">
+                                <span>View Map</span> <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVENT 5: Grand Reception (DELHI) -->
+                <div class="relative pl-12 group transition-all duration-300">
+                    <div class="absolute left-3.5 top-1.5 w-5 h-5 rounded-full bg-royalRed border-2 border-goldAccent flex items-center justify-center z-10">
+                        <span class="w-2 h-2 rounded-full bg-emerald"></span>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl border border-goldAccent/25 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-red-50 text-red-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Sunday, July 5, 2026</span>
+                            <span class="text-emerald font-sans font-semibold text-xs flex items-center gap-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> Reception Night
+                            </span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-royalRed flex items-center gap-2">
+                            <span>The Grand Reception</span>
+                        </h3>
+                        <p class="text-xs text-stone-600 mt-2">To celebrate our union, join us for a luxurious evening of blessings, sumptuous dining, and heartfelt congratulations in Wazirpur, Delhi.</p>
+                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
+                            <div class="flex items-center gap-1.5 text-xs text-stone-700">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-royalRed"></i>
+                                <span>Green Lounge Banquet, Wazirpur</span>
+                            </div>
+                            <a href="https://maps.google.com/?q=Green+Lounge+Banquet+Wazirpur+Delhi" target="_blank" class="text-xs font-semibold text-goldAccent hover:underline flex items-center gap-1">
+                                <span>View Map</span> <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Page Actions -->
+            <div class="mt-12 flex gap-4">
+                <button onclick="switchScreen('screenRSVP')" class="flex-1 bg-gradient-to-r from-emerald to-teal-800 text-white font-sans py-3.5 rounded-full font-bold tracking-wider uppercase text-xs transition duration-300 hover:shadow-lg hover:scale-102 flex items-center justify-center gap-2">
+                    <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                    <span>Confirm RSVP</span>
+                </button>
+                <button onclick="switchScreen('screenContact')" class="bg-white border border-royalRed/20 text-royalRed font-sans py-3.5 px-6 rounded-full font-bold tracking-wider uppercase text-xs transition duration-300 hover:shadow-md flex items-center justify-center">
+                    <span>Contact Info</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: RSVP PORTAL -->
+        <section id="screenRSVP" class="hidden min-h-screen px-6 py-12 relative z-10 transition-opacity duration-700">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <span class="font-cursive text-3xl text-goldAccent block">Reaching out</span>
+                <h1 class="font-cinzel text-2xl font-bold tracking-widest text-royalRed mt-1">RSVP Confirmation</h1>
+                <p class="font-sans text-xs tracking-wider text-emerald uppercase font-semibold mt-1">Will you grace us with your presence?</p>
+                <div class="w-16 h-[2px] bg-goldAccent mx-auto mt-3"></div>
+            </div>
+
+            <!-- Form Area / Ticket generator -->
+            <div id="rsvpFormContainer" class="bg-white p-6 rounded-2xl border border-goldAccent/30 shadow-xl space-y-5">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5" for="guestName">Primary Guest Name</label>
+                    <input type="text" id="guestName" class="w-full bg-stone-50 border border-stone-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-1 focus:ring-goldAccent" placeholder="Enter full name">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5">Number of Guests</label>
+                    <div class="grid grid-cols-5 gap-2">
+                        <button onclick="selectCount(1)" class="guest-count-btn border border-stone-200 py-2.5 rounded-lg text-sm font-semibold hover:border-goldAccent active:bg-amber-50">1</button>
+                        <button onclick="selectCount(2)" class="guest-count-btn border border-stone-200 py-2.5 rounded-lg text-sm font-semibold hover:border-goldAccent">2</button>
+                        <button onclick="selectCount(3)" class="guest-count-btn border border-stone-200 py-2.5 rounded-lg text-sm font-semibold hover:border-goldAccent">3</button>
+                        <button onclick="selectCount(4)" class="guest-count-btn border border-stone-200 py-2.5 rounded-lg text-sm font-semibold hover:border-goldAccent">4</button>
+                        <button onclick="selectCount(5)" class="guest-count-btn border border-stone-200 py-2.5 rounded-lg text-sm font-semibold hover:border-goldAccent">5+</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Events Attending</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100/50 transition">
+                            <input type="checkbox" class="rsvp-event-cb accent-royalRed w-4 h-4" value="Pitthi Haldi & Myra">
+                            <span class="text-xs text-stone-800 font-semibold">Pitthi Haldi & Myra (Jodhpur, July 2)</span>
+                        </label>
+                        <label class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100/50 transition">
+                            <input type="checkbox" class="rsvp-event-cb accent-royalRed w-4 h-4" value="Tika & Sangeet">
+                            <span class="text-xs text-stone-800 font-semibold">Tika & Sangeet Night (Jodhpur, July 2)</span>
+                        </label>
+                        <label class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100/50 transition">
+                            <input type="checkbox" class="rsvp-event-cb accent-royalRed w-4 h-4" value="Phoolon Vali Haldi">
+                            <span class="text-xs text-stone-800 font-semibold">Carnival Phoolon Vali Haldi (Jodhpur, July 3)</span>
+                        </label>
+                        <label class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100/50 transition">
+                            <input type="checkbox" class="rsvp-event-cb accent-royalRed w-4 h-4" value="Ghud Chadi & Baarat">
+                            <span class="text-xs text-stone-800 font-semibold">Ghud Chadi & Baarat Wedding (Jodhpur, July 3)</span>
+                        </label>
+                        <label class="flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200 cursor-pointer hover:bg-stone-100/50 transition">
+                            <input type="checkbox" class="rsvp-event-cb accent-royalRed w-4 h-4" value="Delhi Reception">
+                            <span class="text-xs text-stone-800 font-semibold">Delhi Grand Reception (Delhi, July 5)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1.5" for="specialMessage">Blessings / Congratulatory Note</label>
+                    <textarea id="specialMessage" rows="3" class="w-full bg-stone-50 border border-stone-200 rounded-lg p-3 text-sm focus:outline-none focus:ring-1 focus:ring-goldAccent" placeholder="Send a heartwarming blessing..."></textarea>
+                </div>
+
+                <button onclick="submitRSVP()" class="w-full bg-royalRed text-goldAccent py-4 rounded-xl font-bold uppercase tracking-widest text-xs border border-goldAccent hover:bg-red-950 transition active:scale-95">
+                    Generate Digital Invitation Pass
+                </button>
+            </div>
+
+            <!-- SUCCESSFUL TICKET POPUP -->
+            <div id="rsvpSuccessCard" class="hidden bg-royalRed text-goldAccent rounded-2xl border-2 border-goldAccent p-6 shadow-2xl relative overflow-hidden text-center space-y-6">
+                <!-- Inner decorative lines -->
+                <div class="absolute inset-2 border border-goldAccent/30 rounded-xl pointer-events-none"></div>
+
+                <div class="space-y-2">
+                    <span class="font-cursive text-3xl">Subh Kamanaye</span>
+                    <h2 class="font-cinzel text-xl font-bold tracking-widest">RSVP Confirmed!</h2>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-200">The Ajmera Family Welcomes You</p>
+                </div>
+
+                <!-- Ticket details representation -->
+                <div class="border-y border-dashed border-goldAccent/40 py-4 my-2 text-left space-y-3 font-sans">
+                    <div class="flex justify-between">
+                        <span class="text-[10px] uppercase text-stone-300">Guest Guest Name</span>
+                        <span id="ticketGuest" class="text-xs font-bold text-white">Guest</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-[10px] uppercase text-stone-300">Total Attendees</span>
+                        <span id="ticketCount" class="text-xs font-bold text-white">1 Person</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-[10px] uppercase text-stone-300">Events Selected</span>
+                        <span id="ticketEvents" class="text-xs font-bold text-white text-right max-w-[200px] truncate">All Events</span>
+                    </div>
+                </div>
+
+                <!-- Custom Mock QR/Lotus Motif for RSVP Security -->
+                <div class="flex flex-col items-center justify-center py-2 space-y-2">
+                    <!-- Elegant SVG Gold Lotus representing the wedding seal -->
+                    <svg class="w-16 h-16 text-goldAccent animate-pulse" viewBox="0 0 100 100" fill="currentColor">
+                        <path d="M50 20 C35 45, 65 45, 50 20 Z" />
+                        <path d="M50 30 C20 60, 45 70, 50 30 Z" opacity="0.8"/>
+                        <path d="M50 30 C80 60, 55 70, 50 30 Z" opacity="0.8"/>
+                        <path d="M50 45 C10 75, 40 85, 50 45 Z" opacity="0.6"/>
+                        <path d="M50 45 C90 75, 60 85, 50 45 Z" opacity="0.6"/>
+                    </svg>
+                    <span class="text-[9px] tracking-[0.2em] uppercase text-stone-200">AJMERA WEDDING SEAL</span>
+                </div>
+
+                <div class="flex gap-2">
+                    <button onclick="resetRSVPForm()" class="flex-1 bg-white/10 hover:bg-white/20 text-white text-xs py-3 rounded-lg border border-white/20 transition">
+                        Update RSVP
+                    </button>
+                    <button onclick="shareTicket()" class="flex-1 bg-goldAccent text-royalRed font-bold text-xs py-3 rounded-lg transition hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5">
+                        <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Share Blessing
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: FAMILY CONTACTS -->
+        <section id="screenContact" class="hidden min-h-screen px-6 py-12 relative z-10 transition-opacity duration-700">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <span class="font-cursive text-3xl text-goldAccent block">Aapno Jodhpur</span>
+                <h1 class="font-cinzel text-2xl font-bold tracking-widest text-royalRed mt-1">RSVP Contacts</h1>
+                <p class="font-sans text-xs tracking-wider text-emerald uppercase font-semibold mt-1">Need help or want to confirm directly?</p>
+                <div class="w-16 h-[2px] bg-goldAccent mx-auto mt-3"></div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-goldAccent/30 shadow-xl space-y-6">
+                <p class="text-sm text-stone-600 text-center leading-relaxed">
+                    Please get in touch with the Ajmera family coordinators if you have questions regarding accommodation, travel details to **Lariya Resort Jodhpur** or **Green Lounge Banquet Delhi**.
+                </p>
+
+                <!-- Contacts Grid -->
+                <div class="space-y-4">
+                    <!-- Ghanshyam Ajmera -->
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex justify-between items-center hover:border-goldAccent transition">
+                        <div>
+                            <p class="font-serif text-base font-bold text-royalRed">Ghanshyam Ajmera</p>
+                            <p class="text-xs text-stone-500">Ajmera Family Host</p>
+                            <p class="text-sm font-semibold text-stone-700 mt-1">+91 9818583494</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+919818583494" class="p-3 bg-emerald/10 text-emerald rounded-full hover:bg-emerald/25 transition">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/919818583494?text=Hi%20Ghanshyam%20ji,%20confirming%20my%20arrival%20details%20for%20the%20Ajmera%20Family%20Wedding." target="_blank" class="p-3 bg-emerald/10 text-emerald rounded-full hover:bg-emerald/25 transition">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Akshay Ajmera -->
+                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex justify-between items-center hover:border-goldAccent transition">
+                        <div>
+                            <p class="font-serif text-base font-bold text-royalRed">Akshay Ajmera</p>
+                            <p class="text-xs text-stone-500">Ajmera Family Host</p>
+                            <p class="text-sm font-semibold text-stone-700 mt-1">+91 9899172702</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="tel:+919899172702" class="p-3 bg-emerald/10 text-emerald rounded-full hover:bg-emerald/25 transition">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/919899172702?text=Hi%20Akshay,%20confirming%20my%20arrival%20details%20for%20the%20Ajmera%20Family%20Wedding." target="_blank" class="p-3 bg-emerald/10 text-emerald rounded-full hover:bg-emerald/25 transition">
+                                <i data-lucide="message-square" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-stone-100 pt-5 text-center">
+                    <p class="font-cursive text-2xl text-goldAccent">Atithi Devo Bhava</p>
+                    <p class="text-[10px] text-stone-500 uppercase tracking-widest mt-1">We look forward to welcoming you soon!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSISTENT BOTTOM NAVIGATION DECK -->
+        <nav class="absolute bottom-0 left-0 right-0 h-20 bg-royalRed/95 backdrop-blur-md border-t border-goldAccent/30 flex items-center justify-around px-4 z-40">
+            <button onclick="switchScreen('screenCover')" id="btnCover" class="nav-btn flex flex-col items-center gap-1 text-goldAccent transition active:scale-95">
+                <i data-lucide="heart" class="w-5 h-5 text-goldAccent"></i>
+                <span class="text-[9px] uppercase tracking-wider">Cover</span>
+            </button>
+            <button onclick="switchScreen('screenEvents')" id="btnEvents" class="nav-btn flex flex-col items-center gap-1 text-white/60 transition active:scale-95">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                <span class="text-[9px] uppercase tracking-wider">Itinerary</span>
+            </button>
+            <button onclick="switchScreen('screenRSVP')" id="btnRSVP" class="nav-btn flex flex-col items-center gap-1 text-white/60 transition active:scale-95">
+                <i data-lucide="check-square" class="w-5 h-5"></i>
+                <span class="text-[9px] uppercase tracking-wider">RSVP</span>
+            </button>
+            <button onclick="switchScreen('screenContact')" id="btnContact" class="nav-btn flex flex-col items-center gap-1 text-white/60 transition active:scale-95">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+                <span class="text-[9px] uppercase tracking-wider">Contacts</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <!-- Scripting for UI and Music Synthesis -->
+    <script>
+        // Init Lucide Icons
+        window.onload = function() {
+            lucide.createIcons();
+            startCountdown();
+        }
+
+        // Screen routing mechanism
+        function switchScreen(screenId) {
+            // Hide all screens
+            document.getElementById('screenCover').classList.add('hidden');
+            document.getElementById('screenEvents').classList.add('hidden');
+            document.getElementById('screenRSVP').classList.add('hidden');
+            document.getElementById('screenContact').classList.add('hidden');
+
+            // Show selected screen
+            const targetScreen = document.getElementById(screenId);
+            targetScreen.classList.remove('hidden');
+            targetScreen.classList.add('animate-fade');
+
+            // Reset navigation highlight state
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.add('text-white/60');
+                btn.classList.remove('text-goldAccent');
+                // reset icon state to normal
+                const icon = btn.querySelector('svg');
+                if (icon) icon.classList.remove('text-goldAccent');
+            });
+
+            // Highlight current button
+            let currentBtnId = '';
+            if (screenId === 'screenCover') currentBtnId = 'btnCover';
+            if (screenId === 'screenEvents') currentBtnId = 'btnEvents';
+            if (screenId === 'screenRSVP') currentBtnId = 'btnRSVP';
+            if (screenId === 'screenContact') currentBtnId = 'btnContact';
+
+            const activeBtn = document.getElementById(currentBtnId);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-white/60');
+                activeBtn.classList.add('text-goldAccent');
+                const activeIcon = activeBtn.querySelector('svg');
+                if (activeIcon) activeIcon.classList.add('text-goldAccent');
+            }
+
+            // Scroll to top of panel smoothly
+            document.getElementById('mainContainer').scrollTop = 0;
+        }
+
+        // Live Countdown Clock (Auspicious Wedding Target: Thursday, July 2, 2026, 10:00 AM)
+        function startCountdown() {
+            const targetDate = new Date('July 2, 2026 10:00:00').getTime();
+
+            const timerInterval = setInterval(function() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('days').innerText = "00";
+                    document.getElementById('hours').innerText = "00";
+                    document.getElementById('minutes').innerText = "00";
+                    document.getElementById('seconds').innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days.toString().padStart(2, '0');
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            }, 1000);
+        }
+
+        // RSVP Guest count selection
+        let selectedGuestCount = 1;
+        function selectCount(count) {
+            selectedGuestCount = count;
+            const buttons = document.querySelectorAll('.guest-count-btn');
+            buttons.forEach((btn, index) => {
+                if (index + 1 === count) {
+                    btn.classList.add('bg-royalRed', 'text-goldAccent', 'border-goldAccent');
+                    btn.classList.remove('border-stone-200');
+                } else {
+                    btn.classList.remove('bg-royalRed', 'text-goldAccent', 'border-goldAccent');
+                    btn.classList.add('border-stone-200');
+                }
+            });
+        }
+        // Initialize first button select
+        selectCount(1);
+
+        // RSVP submission & Boarding Pass simulation
+        function submitRSVP() {
+            const guestName = document.getElementById('guestName').value.trim();
+            if (!guestName) {
+                alertToast("Please enter your name to confirm the RSVP card.");
+                return;
+            }
+
+            // Collect selected events
+            const selectedEvents = [];
+            document.querySelectorAll('.rsvp-event-cb:checked').forEach(cb => {
+                selectedEvents.push(cb.value);
+            });
+
+            if (selectedEvents.length === 0) {
+                alertToast("Please select at least one event you wish to attend.");
+                return;
+            }
+
+            // Fill ticket values
+            document.getElementById('ticketGuest').innerText = guestName;
+            document.getElementById('ticketCount').innerText = `${selectedGuestCount} Person(s)`;
+            document.getElementById('ticketEvents').innerText = selectedEvents.join(', ');
+
+            // Animate transition to confirmed pass
+            document.getElementById('rsvpFormContainer').classList.add('hidden');
+            const successCard = document.getElementById('rsvpSuccessCard');
+            successCard.classList.remove('hidden');
+            successCard.classList.add('animate-float');
+        }
+
+        function resetRSVPForm() {
+            document.getElementById('rsvpSuccessCard').classList.add('hidden');
+            document.getElementById('rsvpFormContainer').classList.remove('hidden');
+            document.getElementById('guestName').value = '';
+            document.getElementById('specialMessage').value = '';
+            document.querySelectorAll('.rsvp-event-cb').forEach(cb => cb.checked = false);
+            selectCount(1);
+        }
+
+        // Simulated Share Mechanism using system navigation or custom message copy
+        function shareTicket() {
+            const guest = document.getElementById('ticketGuest').innerText;
+            const text = `🎉 I have confirmed my RSVP for the elegant Ajmera Family Wedding on July 2-5, 2026. Looking forward to celebrating!`;
+            
+            // Clipboard Copy Fallback
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            alertToast("RSVP Blessing copied to clipboard! Share with family.");
+        }
+
+        // Custom Toast Box
+        function alertToast(message) {
+            const toast = document.createElement("div");
+            toast.className = "fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-royalRed text-goldAccent text-xs px-6 py-3 rounded-full border border-goldAccent shadow-2xl z-50 font-bold uppercase tracking-wider text-center max-w-[90%]";
+            toast.innerText = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        /* --- IMMERSIVE INTERACTIVE SHEHNAI/SITAR AUDIO ENGINE (Web Audio API) --- */
+        let audioCtx = null;
+        let isPlaying = false;
+        let playbackTimeout = null;
+
+        const musicToggle = document.getElementById('musicToggle');
+        const musicLabel = document.getElementById('musicLabel');
+
+        // Traditional raga pentatonic scale frequencies (simulating Bhupali/Yaman morning raga mood)
+        const scale = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25, 783.99, 880.00]; // C Major/Pentatonic scale harmonics
+
+        function initAudio() {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+
+        function playTraditionalSitarNote(frequency, duration, delayTime) {
+            if (!audioCtx) return;
+
+            // Oscillator for Sitar plucked string
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            
+            // BiquadFilter to add sharp, metallic Indian acoustic character
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = "peaking";
+            filter.frequency.value = 1000;
+            filter.Q.value = 10;
+            filter.gain.value = 12;
+
+            osc.connect(filter);
+            filter.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            osc.type = "sawtooth";
+            osc.frequency.value = frequency;
+
+            // Sitar plucking envelope dynamics
+            const now = audioCtx.currentTime + delayTime;
+            gainNode.gain.setValueAtTime(0, now);
+            gainNode.gain.linearRampToValueAtTime(0.12, now + 0.02); // Fast pluck attack
+            gainNode.gain.exponentialRampToValueAtTime(0.001, now + duration); // Long elegant decay resonance
+
+            osc.start(now);
+            osc.stop(now + duration);
+        }
+
+        // Generative classical composition sequence
+        function playTraditionalRagaComposition() {
+            if (!isPlaying) return;
+
+            let stepDelay = 0;
+            // Play a 4-step beautiful loop
+            for (let i = 0; i < 6; i++) {
+                const randomFreq = scale[Math.floor(Math.random() * scale.length)];
+                // Pluck speed
+                const duration = 1.8;
+                playTraditionalSitarNote(randomFreq, duration, stepDelay);
+                stepDelay += 0.45; // time till next melodic pluck
+            }
+
+            // Loop generation endlessly every 3.2 seconds
+            playbackTimeout = setTimeout(playTraditionalRagaComposition, 2800);
+        }
+
+        musicToggle.addEventListener('click', () => {
+            if (!audioCtx) {
+                initAudio();
+            }
+
+            if (!isPlaying) {
+                isPlaying = true;
+                audioCtx.resume();
+                musicLabel.innerText = "Mute Shehnai";
+                playTraditionalRagaComposition();
+                alertToast("Traditional instrumental Sitar simulation initialized!");
+            } else {
+                isPlaying = false;
+                clearTimeout(playbackTimeout);
+                musicLabel.innerText = "Play Shehnai";
+            }
+        });
+    </script>
+</body>
+</html>
